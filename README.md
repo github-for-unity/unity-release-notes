@@ -1,5 +1,7 @@
 ## Release notes generator for GitHub for Uity
 
+This script will grab all the issues that have been closed since the last tag was created and list them by Features/Enhancements/Bugs (plus all the PRs that were closed in case something was missed).
+
 To make this work, you need to:
 
 - Create an application on github.com
@@ -24,3 +26,4 @@ Then run `node generate.js > notes.txt 2>errorlog`
 If bash on windows complains about this command with the error `output is not a tty`, then run 
 
 `npm start > notes.txt 2>errorlog` instead
+
