@@ -1,0 +1,5 @@
+setenv.sh
+node_modules
+scratch
+errorlog
+notes.txt
