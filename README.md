@@ -1,4 +1,4 @@
-## Release notes generator for GitHub for Uity
+## Release notes generator for GitHub for Unity
 
 This script will grab all the issues that have been closed since the last tag was created and list them by Features/Enhancements/Bugs (plus all the PRs that were closed in case something was missed).
 
