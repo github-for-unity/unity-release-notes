@@ -1,6 +1,6 @@
 {
   "name": "unity-release-notes",
-  "version": "0.0.0",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "start": "node ./generate.js"
@@ -11,5 +11,10 @@
     "node-localstorage": "*",
     "readline-sync": "*",
     "request": "*"
-  }
+  },
+  "description": "Generate release notes for GitHub for Unity",
+  "main": "generate.js",
+  "repository": "git@github.com:github-for-unity/unity-release-notes.git",
+  "author": "Andreia Gaita <shana@spoiledcat.net>",
+  "license": "MIT"
 }

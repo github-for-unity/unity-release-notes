@@ -23,18 +23,19 @@ function getReleaseChangeLog()
         owner: owner,
         repo: repo,
         page: 1,
-        per_page: 1
+        per_page: 2
     }, function(err, releases) {
-        var res = releases.data[0];
+        var res = releases.data.filter(function(el) {
+            return !el.draft;
+        });
         //console.error(JSON.stringify(JSON.parse(JSON.stringify(res)),null,'\t'));
-        var tag = res.tag_name;
-        var date = res.created_at;
+        var tag = res[0].tag_name;
+        var date = res[0].created_at;
 
         github.gitdata.getTags({
             owner: owner,
             repo: repo,
         }, function(err, res) {
-            
             var t = res.data.filter(function(el) {
                 return el.ref == "refs/tags/" + tag;
             });
